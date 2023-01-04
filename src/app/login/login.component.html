@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="input-wrapper">
+    <label for="username">Username: </label>
+    <input id="usernameInput" type="text" [formControl]="username" />
+  </div>
+
+  <div class="input-wrapper">
+    <label for="password">Password: </label>
+    <input id="passwordInput" type="text" [formControl]="password" />
+  </div>
+
+  <div flex>
+    <div class="debug-username">
+      <span>{{ username.value }}</span>
+    </div>
+    <div class="debug-password">
+      <span>{{ password.value }}</span>
+    </div>
+    <div class="debug-valid-password">
+      <span [ngClass]="{ valid: !!validPassword, invalid: !validPassword }">{{
+        validPassword
+      }}</span>
+    </div>
+  </div>
+  <button type="button" (click)="validatePassword()">Login</button>
+</div>
