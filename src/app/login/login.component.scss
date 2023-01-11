@@ -10,7 +10,7 @@
     margin-bottom: 20px;
     flex-direction: column;
     gap: 5px;
-    color: lightseagreen;
+    color: blueviolet;
   }
 
   .input-wrapper {
@@ -20,6 +20,7 @@
 
 .valid {
   color: green;
+  font-weight: bold;
 }
 .invalid {
   color: red;
