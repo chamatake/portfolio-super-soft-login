@@ -9,7 +9,7 @@
     <input id="passwordInput" type="text" [formControl]="password" />
   </div>
 
-  <div flex>
+  <div class="debug-container">
     <div class="debug-username">
       <span>{{ username.value }}</span>
     </div>
@@ -17,10 +17,11 @@
       <span>{{ password.value }}</span>
     </div>
     <div class="debug-valid-password">
-      <span [ngClass]="{ valid: !!validPassword, invalid: !validPassword }">{{
-        validPassword
+      <span [ngClass]="{ valid: !!authenticated, invalid: !authenticated }">{{
+        authenticated
       }}</span>
     </div>
   </div>
+
   <button type="button" (click)="validatePassword()">Login</button>
 </div>

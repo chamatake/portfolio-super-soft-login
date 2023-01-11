@@ -4,6 +4,18 @@
   border-style: solid;
   border-color: black;
   padding: 20px 10px;
+
+  .debug-container {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 5px;
+    color: lightseagreen;
+  }
+
+  .input-wrapper {
+    margin-bottom: 10px;
+  }
 }
 
 .valid {

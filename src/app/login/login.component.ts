@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 const acceptablePassword: string = 'hamatake';
@@ -8,15 +8,13 @@ const acceptablePassword: string = 'hamatake';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   constructor() {}
   username: FormControl = new FormControl('');
   password: FormControl = new FormControl('');
-  public validPassword: boolean = false;
+  public authenticated: boolean = false;
 
   public validatePassword(): void {
-    this.validPassword = this.password.value === acceptablePassword;
+    this.authenticated = this.password.value === acceptablePassword;
   }
-
-  ngOnInit() {}
 }
