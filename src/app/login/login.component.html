@@ -1,3 +1,4 @@
+<h2>Please Log In...</h2>
 <div class="login-container">
   <div class="input-wrapper">
     <label for="username">Username: </label>
@@ -17,9 +18,9 @@
       <span>{{ password.value }}</span>
     </div>
     <div class="debug-valid-password">
-      <span [ngClass]="{ valid: !!authenticated, invalid: !authenticated }">{{
-        authenticated
-      }}</span>
+      <span [ngClass]="{ valid: !!authenticated, invalid: !authenticated }">
+        Authenticated: {{ authenticated }}
+      </span>
     </div>
   </div>
 
